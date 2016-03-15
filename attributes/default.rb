@@ -18,12 +18,19 @@ default['chefdk_bootstrap']['atom']['source_url'] =
     'mac_os_x' => 'https://atom.io/download/mac',
     'windows' => 'https://atom.io/download/windows'
   )
+  
+default ['chefdk_bootstrap']['vscode']['source_url'] =
+  value_for_platform_family(
+    'windows' => 'https://go.microsoft.com/fwlink/?LinkID=623230'  
+  )
+
 
 # common things to install
 default['chefdk_bootstrap']['package'].tap do |install|
-  install['atom'] = true
-  install['virtualbox'] = true
-  install['vagrant'] = true
+  install['atom'] = false
+  install['vscode'] = true
+  install['virtualbox'] = false
+  install['vagrant'] = false
   install['git'] = true
   install['chefdk_julia'] = false
 end
