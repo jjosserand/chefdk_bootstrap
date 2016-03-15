@@ -59,7 +59,7 @@ $env:HOME = $env:USERPROFILE
 $berksfile = @"
 $privateSource
 
-cookbook '$bootstrapCookbook', git: 'https://github.com/chef-partners/chefdk_bootstrap.git'
+cookbook '$bootstrapCookbook', git: 'https://github.com/chef-partners/chefdk_bootstrap'
 "@
 
 $chefConfig = @"
