@@ -57,7 +57,6 @@ $omniUrl = "https://omnitruck.chef.io/install.ps1"
 $env:HOME = $env:USERPROFILE
 
 $berksfile = @"
-source 'https://supermarket.chef.io'
 $privateSource
 
 cookbook '$bootstrapCookbook', git: 'https://github.com/chef-partners/chefdk_bootstrap.git'
