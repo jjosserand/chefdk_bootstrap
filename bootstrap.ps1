@@ -60,7 +60,7 @@ $berksfile = @"
 source 'https://supermarket.chef.io'
 $privateSource
 
-cookbook '$bootstrapCookbook'
+cookbook '$bootstrapCookbook', git: 'https://github.com/chef-partners/chefdk_bootstrap.git'
 "@
 
 $chefConfig = @"
